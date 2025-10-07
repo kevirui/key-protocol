@@ -2,6 +2,32 @@
 
 Un libro de contabilidad compartido para el impacto social construido con tecnología blockchain en el ecosistema Polkadot.
 
+## La Visión: De la Carga Administrativa a la Inteligencia de Impacto
+
+Cada año, instituciones como el BID, ONU, CAF invierten miles de millones en programas de desarrollo. Para gestionar estos fondos, las ONGs ejecutoras en el terreno dedican hasta un 30% de sus recursos a tareas de Monitoreo y Evaluación (M&E). El sistema actual exige este laborioso proceso de reporte manual, lo que desvía un tiempo valioso que los equipos podrían dedicar a su misión en el terreno y, a su vez, retrasa la llegada de datos clave a los financiadores.
+
+**KEY Protocol es la solución.** Estamos construyendo una infraestructura de software compartida que automatiza la verificación de resultados, liberando a las ONGs de la carga administrativa y ofreciendo a los financiadores una visibilidad clara y en tiempo real del progreso.
+
+**La Misión de esta Hackatón:** Construir los componentes fundacionales del MVP que presentaremos a nuestros clientes (ONGs, financiadores) como una herramienta para optimizar toda la cadena de valor del impacto, fortaleciendo su relación con sus socios ejecutores.
+
+---
+
+## El Desafío: Una Oportunidad Compartida
+
+El sistema actual de reporte no presta un servicio eficientemente a ninguna de las partes. Es una oportunidad para la optimización.
+
+#### Para el Financiador:
+* **Visibilidad Diferida:** Las decisiones se basan en datos que llegan con semanas o meses de retraso, limitando la capacidad de ajustar estrategias ágilmente.
+* **Datos Desestructurados:** Cada socio reporta en distintos formatos, haciendo la comparación y el análisis a nivel de portafolio una tarea compleja y manual.
+* **Altos Costos de Auditoría:** La verificación de los reportes es un proceso costoso y lento.
+
+#### Para el Socio Ejecutor (La ONG en Territorio):
+* **Enorme Carga de Reporte:** Técnicos y capacitadores altamente cualificados dedican un tiempo precioso a llenar planillas y redactar informes, en lugar de estar con las comunidades.
+* **Herramientas Inadecuadas:** A menudo deben usar sistemas que no están diseñados para las condiciones del terreno (baja conectividad, interfaces complejas).
+* **Dificultad para Demostrar Valor:** Es un reto comunicar la profundidad y calidad de su trabajo a través de métricas cuantitativas en una hoja de cálculo.
+
+**Nuestra Tesis:** Una plataforma compartida de datos verificables crea un círculo virtuoso. Cuando el reporte se automatiza y se vuelve confiable, los financiadores ganan la visibilidad que necesitan y las ONGs recuperan el tiempo y los recursos para enfocarse en generar impacto territorial.
+
 ## 🚀 Características
 
 - **Dashboard de Impacto**: Visión integral y en tiempo real del progreso y el impacto de los proyectos
@@ -245,7 +271,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 📞 Contacto
 
-KEY Protocol Team - [@keyprotocol](https://twitter.com/keyprotocol)
+KEY Protocol Team - [@key_protocol](https://twitter.com/key_protocol)
 
 ---
 
