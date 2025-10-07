@@ -2,7 +2,7 @@
 
 Un libro de contabilidad compartido para el impacto social construido con tecnología blockchain en el ecosistema Polkadot.
 
-## La Visión: De la Carga Administrativa a la Inteligencia de Impacto
+## 🏁 La Visión: De la Carga Administrativa a la Inteligencia de Impacto
 
 Cada año, instituciones como el BID, ONU, CAF invierten miles de millones en programas de desarrollo. Para gestionar estos fondos, las ONGs ejecutoras en el terreno dedican hasta un 30% de sus recursos a tareas de Monitoreo y Evaluación (M&E). El sistema actual exige este laborioso proceso de reporte manual, lo que desvía un tiempo valioso que los equipos podrían dedicar a su misión en el terreno y, a su vez, retrasa la llegada de datos clave a los financiadores.
 
@@ -10,7 +10,7 @@ Cada año, instituciones como el BID, ONU, CAF invierten miles de millones en pr
 
 **La Misión de esta Hackatón:** Construir los componentes fundacionales del MVP que presentaremos a nuestros clientes (ONGs, financiadores) como una herramienta para optimizar toda la cadena de valor del impacto, fortaleciendo su relación con sus socios ejecutores.
 
-## El Desafío: Una Oportunidad Compartida
+## 💪 El Desafío: Una Oportunidad Compartida
 
 El sistema actual de reporte no presta un servicio eficientemente a ninguna de las partes. Es una oportunidad para la optimización.
 
