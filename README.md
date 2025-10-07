@@ -10,8 +10,6 @@ Cada año, instituciones como el BID, ONU, CAF invierten miles de millones en pr
 
 **La Misión de esta Hackatón:** Construir los componentes fundacionales del MVP que presentaremos a nuestros clientes (ONGs, financiadores) como una herramienta para optimizar toda la cadena de valor del impacto, fortaleciendo su relación con sus socios ejecutores.
 
----
-
 ## El Desafío: Una Oportunidad Compartida
 
 El sistema actual de reporte no presta un servicio eficientemente a ninguna de las partes. Es una oportunidad para la optimización.
