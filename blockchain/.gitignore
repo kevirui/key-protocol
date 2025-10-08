@@ -1,0 +1,51 @@
+# Node and pnpm
+node_modules/
+.pnpm-store/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Build outputs
+cache/
+artifacts/
+artifacts-pvm/
+cache-pvm/
+typechain/
+coverage/
+coverage.json
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.local
+.env.*
+!.env.example
+.env.example
+hardhat.config.local.ts
+
+# Hardhat Ignition (deployment state)
+ignition/deployments/
+deployments/
+broadcast/
+typechain-types/*
+
+# IDE / OS / misc
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Solidity temp
+*.dbg.json
+*.solc
+*.bin
+*.abi
+
+# Frontend A pesar de que no utilizare aca
+.next/
+dist/
+out/
+
