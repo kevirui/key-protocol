@@ -75,7 +75,7 @@ describe("🧱 ProjectRegistry (UUPS Upgradeable)", function () {
     project = await ProjectRegistry.deploy();
     await project.waitForDeployment();
 
-    const identityAddress = await proxyIdentity.getAddress(); // ✅ cast implícito como address payable
+    const identityAddress = await proxyIdentity.getAddress();
     const initDataProject = project.interface.encodeFunctionData("initialize", [
       admin.address,
       identityAddress,

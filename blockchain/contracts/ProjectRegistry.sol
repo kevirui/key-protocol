@@ -47,8 +47,8 @@ contract ProjectRegistry is AccessControlUpgradeable, UUPSUpgradeable, Reentranc
         __UUPSUpgradeable_init();
         __ReentrancyGuard_init();
 
-        _grantRole(DEFAULT_ADMIN_ROLE, _admin); // ✅ necesario para usar grantRole
-        _grantRole(ADMIN_ROLE, _admin);         // ✅ mantiene tu rol personalizado
+        _grantRole(DEFAULT_ADMIN_ROLE, _admin);
+        _grantRole(ADMIN_ROLE, _admin);
         identityRegistry = IdentityRegistry(_identityRegistry);
     }
 
