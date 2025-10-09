@@ -48,3 +48,6 @@ typechain-types/*
 dist/
 out/
 
+# Registros propios
+
+resultado.txt
