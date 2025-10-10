@@ -185,6 +185,11 @@ contract ProjectRegistry is AccessControlUpgradeable, UUPSUpgradeable, Reentranc
         emit ProjectStatusChanged(projectId, projects[projectId].active);
     }
 
+    // --- Getters públicos ---
+    function getActivityId(uint256 activityId) external view returns (uint256) {
+        return activities[activityId].id;
+    }
+
     // --- Utilidades internas ---
     function validateProject(uint256 projectId) internal view {
         require(projects[projectId].id != 0, "Invalid");
