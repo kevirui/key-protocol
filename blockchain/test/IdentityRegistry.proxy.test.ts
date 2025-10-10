@@ -200,86 +200,86 @@ describe("🧱 IdentityRegistry (ERC1967Proxy manual)", function () {
       .withArgs(profesor.address, ong.address);
   });
 
-  // 🚫 TESTS NEGATIVOS
+// 🚫 TESTS NEGATIVOS
 
-  it("🚫 Rechaza aprobación de ONG por cuenta sin rol admin", async function () {
-    const ongData = {
-      wallet: ong.address,
-      name: "ONG Test",
-      country: "PE",
-      description: "ONG de prueba",
-      metadataURI: "ipfs://ong-meta",
-      didHash: ethers.ZeroHash,
-      verified: false,
-    };
-    await proxy
-      .connect(ong)
-      .requestRegistrationONG(ongData, { value: ethers.parseEther("0.01") });
+it("🚫 Rechaza aprobación de ONG por cuenta sin rol admin", async function () {
+  const ongData = {
+    wallet: ong.address,
+    name: "ONG Test",
+    country: "PE",
+    description: "ONG de prueba",
+    metadataURI: "ipfs://ong-meta",
+    didHash: ethers.ZeroHash,
+    verified: false,
+  };
+  await proxy
+    .connect(ong)
+    .requestRegistrationONG(ongData, { value: ethers.parseEther("0.01") });
 
-    await expect(
-      proxy.connect(inversor).approveONG(ong.address)
-    ).to.be.revertedWithCustomError(proxy, "AccessControlUnauthorizedAccount");
-  });
+  await expect(
+    proxy.connect(inversor).approveONG(ong.address)
+  ).to.be.revertedWith(/AccessControl: account .* is missing role/);
+});
 
-  it("🚫 ONG no aprobada no puede registrar profesor", async function () {
-    const profData = {
-      wallet: profesor.address,
-      name: "Juan Profesor",
-      specialty: "Agrotech",
-      metadataURI: "ipfs://profesor-metadata",
-      didHash: ethers.ZeroHash,
-      associatedONGs: [],
-      active: true,
-    };
+it("🚫 ONG no aprobada no puede registrar profesor", async function () {
+  const profData = {
+    wallet: profesor.address,
+    name: "Juan Profesor",
+    specialty: "Agrotech",
+    metadataURI: "ipfs://profesor-metadata",
+    didHash: ethers.ZeroHash,
+    associatedONGs: [],
+    active: true,
+  };
 
-    await expect(
-      proxy.connect(ong).registerProfessor(profesor.address, profData)
-    ).to.be.revertedWithCustomError(proxy, "AccessControlUnauthorizedAccount");
-  });
+  await expect(
+    proxy.connect(ong).registerProfessor(profesor.address, profData)
+  ).to.be.revertedWith(/AccessControl: account .* is missing role/);
+});
 
-  it("🚫 ONG no aprobada no puede registrar beneficiario", async function () {
-    const benData = {
-      didHash: ethers.ZeroHash,
-      community: "Comunidad Andina",
-      metadataURI: "ipfs://beneficiario-meta",
-      active: true,
-    };
+it("🚫 ONG no aprobada no puede registrar beneficiario", async function () {
+  const benData = {
+    didHash: ethers.ZeroHash,
+    community: "Comunidad Andina",
+    metadataURI: "ipfs://beneficiario-meta",
+    active: true,
+  };
 
-    await expect(
-      proxy.connect(ong).registerBeneficiary(beneficiario.address, benData)
-    ).to.be.revertedWithCustomError(proxy, "AccessControlUnauthorizedAccount");
-  });
+  await expect(
+    proxy.connect(ong).registerBeneficiary(beneficiario.address, benData)
+  ).to.be.revertedWith(/AccessControl: account .* is missing role/);
+});
 
-  it("🚫 Profesor no puede unirse a ONG no verificada", async function () {
-    const ongData = {
-      wallet: ong.address,
-      name: "ONG Verde",
-      country: "CO",
-      description: "ONG dedicada al ambiente",
-      metadataURI: "ipfs://ong-metadata",
-      didHash: ethers.ZeroHash,
-      verified: false,
-    };
-    await proxy
-      .connect(ong)
-      .requestRegistrationONG(ongData, { value: ethers.parseEther("0.01") });
-    // ❌ No se aprueba la ONG → sigue sin estar verificada
+it("🚫 Profesor no puede unirse a ONG no verificada", async function () {
+  const ongData = {
+    wallet: ong.address,
+    name: "ONG Verde",
+    country: "CO",
+    description: "ONG dedicada al ambiente",
+    metadataURI: "ipfs://ong-metadata",
+    didHash: ethers.ZeroHash,
+    verified: false,
+  };
+  await proxy
+    .connect(ong)
+    .requestRegistrationONG(ongData, { value: ethers.parseEther("0.01") });
 
-    const profData = {
-      wallet: profesor.address,
-      name: "Juan Profesor",
-      specialty: "Agrotech",
-      metadataURI: "ipfs://profesor-metadata",
-      didHash: ethers.ZeroHash,
-      associatedONGs: [],
-      active: true,
-    };
-    await proxy.connect(admin).grantRole(await proxy.ONG_ROLE(), ong.address); // ONG necesita rol para registrar
-    await proxy.connect(ong).registerProfessor(profesor.address, profData); // ✅ profesor registrado
+  const profData = {
+    wallet: profesor.address,
+    name: "Juan Profesor",
+    specialty: "Agrotech",
+    metadataURI: "ipfs://profesor-metadata",
+    didHash: ethers.ZeroHash,
+    associatedONGs: [],
+    active: true,
+  };
+  await proxy.connect(admin).grantRole(await proxy.ONG_ROLE(), ong.address);
+  await proxy.connect(ong).registerProfessor(profesor.address, profData);
 
-    await expect(
-      proxy.connect(profesor).joinONG(ong.address)
-    ).to.be.revertedWith("ONG not verified");
-  });
+  await expect(
+    proxy.connect(profesor).joinONG(ong.address)
+  ).to.be.revertedWith("ONG not verified");
+});
+
 });
 
