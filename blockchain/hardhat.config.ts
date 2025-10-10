@@ -28,6 +28,7 @@ const config: HardhatUserConfig = {
       //   adapterBinaryPath: "./bin/eth-rpc",
       //   dev: true,
       // },
+      allowUnlimitedContractSize: true,
     },
     localhost: {
       url: "http://127.0.0.1:8545/",
