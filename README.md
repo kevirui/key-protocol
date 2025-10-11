@@ -34,7 +34,7 @@ El sistema actual de reporte no presta un servicio eficientemente a ninguna de l
 - **Autenticación**: Sistema completo de login/registro para financiadores y ONGs
 - **Multiidioma**: Soporte para español, inglés y portugués
 - **Diseño Responsivo**: Optimizado para mobile, tablet y web
-- **Blockchain Ready**: Preparado para integración con Astar Network y KILT Protocol
+- **Blockchain Ready**: Preparado para integración con Polkadot Network y KILT Protocol
 
 ## 🏗️ Arquitectura
 
@@ -194,7 +194,7 @@ npm run dev
 
 ### 🔄 Próximas Funcionalidades
 
-- [ ] Integración real con Astar Network
+- [ ] Integración real con Polkadot Network
 - [ ] Integración con KILT Protocol para credenciales verificables
 - [ ] Subida real de archivos a IPFS
 - [ ] Smart contracts para verificación automática
